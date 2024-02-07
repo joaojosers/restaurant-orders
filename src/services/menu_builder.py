@@ -32,19 +32,28 @@ class MenuBuilder:
 
         # Filtra os pratos de acordo com a restrição, se houver
         if restriction:
-            dishes = [dish for dish in dishes if restriction not in dish.get_restrictions()]
+            dishes = [
+                dish
+                for dish in dishes
+                if restriction not in dish.get_restrictions()
+            ]
 
         # Constrói a lista de dicionários para o cardápio
         for dish in dishes:
             dish_dict = {
                 "dish_name": dish.name,
-                "ingredients": [ingredient.name for ingredient in dish.get_ingredients()],
+                "ingredients": [
+                    ingredient.name for ingredient in dish.get_ingredients()
+                ],
                 "price": dish.price,
-                "restrictions": [restriction for restriction in dish.get_restrictions()]
+                "restrictions": [
+                    restriction for restriction in dish.get_restrictions()
+                ],
             }
             main_menu.append(dish_dict)
 
         return main_menu
+
     # # Req 4
     # def get_main_menu(self, restriction=None) -> List[Dict]:
     #     pass
