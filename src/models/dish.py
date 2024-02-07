@@ -1,5 +1,5 @@
 from numbers import Real
-from typing import Dict
+from typing import Dict, List
 
 from models.ingredient import Ingredient
 
@@ -39,3 +39,12 @@ class Dish:
 
     def get_ingredients(self):
         return set(self.recipe.keys())
+
+    def get_ingredient_quantity(self, ingredient: Ingredient) -> int:
+        return self.recipe.get(ingredient, 0)
+
+    def get_total_ingredients_quantity(self) -> int:
+        return sum(self.recipe.values())
+
+    def get_ingredient_names(self) -> List[str]:
+        return [ingredient.name for ingredient in self.recipe.keys()]
