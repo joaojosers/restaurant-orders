@@ -38,8 +38,15 @@ class MenuBuilder:
                 if restriction not in dish.get_restrictions()
             ]
 
+        # Verifica a disponibilidade dos ingredientes em estoque
+        available_dishes = [
+            dish
+            for dish in dishes
+            if self.inventory.check_recipe_availability(dish.recipe)
+        ]
+
         # Constrói a lista de dicionários para o cardápio
-        for dish in dishes:
+        for dish in available_dishes:
             dish_dict = {
                 "dish_name": dish.name,
                 "ingredients": [
