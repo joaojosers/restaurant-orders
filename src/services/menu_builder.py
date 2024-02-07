@@ -43,7 +43,7 @@ class MenuBuilder:
             dish_dict = {
                 "dish_name": dish.name,
                 "ingredients": [
-                    ingredient.name for ingredient in dish.get_ingredients()
+                    ingredient for ingredient in dish.get_ingredients()
                 ],
                 "price": dish.price,
                 "restrictions": [
