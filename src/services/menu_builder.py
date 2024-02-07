@@ -53,7 +53,3 @@ class MenuBuilder:
             main_menu.append(dish_dict)
 
         return main_menu
-
-    # # Req 4
-    # def get_main_menu(self, restriction=None) -> List[Dict]:
-    #     pass
