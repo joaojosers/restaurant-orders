@@ -17,20 +17,28 @@ class MenuData:
         self._load_menu_data()
 
     def _load_menu_data(self):
+        dishes_dict = {}  # Dicionário para armazenar os pratos criados
+
         with open(self.source_path, newline="") as csvfile:
             reader = csv.DictReader(csvfile)
-            current_dish = None
             for row in reader:
                 dish_name = row["dish"]
                 price = float(row["price"])
                 ingredient_name = row["ingredient"]
                 recipe_amount = int(row["recipe_amount"])
 
-                if current_dish is None or current_dish.name != dish_name:
-                    current_dish = Dish(dish_name, price)
-                    self.dishes.add(current_dish)
+                # Verifica se o prato já foi criado
+                if dish_name in dishes_dict:
+                    # Se existir o prato, adiciona novo ingrediente à receita
+                    dish = dishes_dict[dish_name]
+                    ingredient = Ingredient(ingredient_name)
+                    dish.add_ingredient_dependency(ingredient, recipe_amount)
+                else:
+                    # Se o prato ainda não foi criado, cria e adiciona ao dict
+                    dish = Dish(dish_name, price)
+                    ingredient = Ingredient(ingredient_name)
+                    dish.add_ingredient_dependency(ingredient, recipe_amount)
+                    dishes_dict[dish_name] = dish
 
-                ingredient = Ingredient(ingredient_name)
-                current_dish.add_ingredient_dependency(
-                    ingredient, recipe_amount
-                )
+        # Ao final, adiciona os pratos do dicionário ao conjunto
+        self.dishes.update(dishes_dict.values())
