@@ -1,10 +1,31 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# restaurant-orders
+
+## Contexto
+Este projeto trata-se de uma ferramenta de back-office para armazenar e buscar dados de pedidos em um restaurante.
+
+## Tecnologias usadas
+
+### Back-end:
+- Desenvolvido usando: Python
+## Crie o ambiente virtual para o projeto
+```
+python3 -m venv .venv && source .venv/bin/activate
+```
+## Instalando Dependências
+```
+python3 -m pip install -r dev-requirements.txt
+```
+## Executando aplicação
+* Para rodar o back-end:
+```
+cd api/ && npm start
+```
+
+## Executando Testes
+- python3 -m pytest
+  . Caso precise executar apenas um arquivo de testes basta executar o comando:
+    ```
+    python3 -m pytest tests/nomedoarquivo.py
+    ```
+## Arquivos desenvolvidos pela Trybe**
+- jestconfig.js, package-lock.json, package.json
