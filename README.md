@@ -30,5 +30,8 @@ cd api/ && npm start
 ```
 python3 -m pytest tests/nomedoarquivo.py
 ```
-## Arquivos desenvolvidos pela Trybe**
-- jestconfig.js, package-lock.json, package.json
+## Arquivos desenvolvidos pela Trybe
+* data:
+  - inventory_base_data.csv, menu_base_data.csv
+* src:
+- dev-requirements.txt, requirements.txt
