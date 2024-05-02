@@ -16,9 +16,9 @@ python3 -m venv .venv && source .venv/bin/activate
 python3 -m pip install -r dev-requirements.txt
 ```
 ## Executando aplicação
-* Para rodar o back-end:
+* Para rodar a aplicacão:
 ```
-cd api/ && npm start
+python3 -m uvicorn app:app
 ```
 
 ## Executando Testes
@@ -32,6 +32,6 @@ python3 -m pytest tests/nomedoarquivo.py
 ```
 ## Arquivos desenvolvidos pela Trybe
 * data:
-  - inventory_base_data.csv, menu_base_data.csv
+- inventory_base_data.csv, menu_base_data.csv
 * src:
 - dev-requirements.txt, requirements.txt
