@@ -22,8 +22,11 @@ cd api/ && npm start
 ```
 
 ## Executando Testes
-- python3 -m pytest
-  . Caso precise executar apenas um arquivo de testes basta executar o comando:
+* executando todos os testes
+ ```
+ python3 -m pytest
+```
+*Caso precise executar apenas um arquivo de testes basta executar o comando:
     ```
     python3 -m pytest tests/nomedoarquivo.py
     ```
