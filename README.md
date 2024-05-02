@@ -26,9 +26,9 @@ cd api/ && npm start
  ```
  python3 -m pytest
 ```
-*Caso precise executar apenas um arquivo de testes basta executar o comando:
-    ```
-    python3 -m pytest tests/nomedoarquivo.py
-    ```
+* Caso precise executar apenas um arquivo de testes basta executar o comando:
+  ```
+  python3 -m pytest tests/nomedoarquivo.py
+  ```
 ## Arquivos desenvolvidos pela Trybe**
 - jestconfig.js, package-lock.json, package.json
