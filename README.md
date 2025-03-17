@@ -10,7 +10,7 @@ Implementar testes para a classe Ingredient e Dish já implementadas anteriormen
 
 ### Back-end:
 - Desenvolvido usando: Python
-- 
+
 ## Crie o ambiente virtual para o projeto
 ```
 python3 -m venv .venv && source .venv/bin/activate
