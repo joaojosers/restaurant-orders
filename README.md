@@ -1,7 +1,11 @@
 # restaurant-orders
 
 ## Contexto
-Este projeto trata-se de uma ferramenta de back-office para armazenar e buscar dados de pedidos em um restaurante. ferramenta de construção de cardápios. O restaurante necessita desta ferramenta para que possa, de maneira simples, gerar seus cardápios considerando possíveis restrições alimentares e também a disponibilidade dos ingredientes em estoque. Implemente a classe MenuData que fará todo o mapeamento de pratos e ingredientes baseado nos arquivos csv disponibilizados.
+Este projeto trata-se de uma ferramenta de back-office para armazenar e buscar dados de pedidos em um restaurante. 
+
+- Implementar ferramenta de construção de cardápios de modo a gerar seus cardápios considerando possíveis restrições alimentares e também a disponibilidade dos ingredientes em   estoque.
+- Implementar a classe MenuData que fará todo o mapeamento de pratos e ingredientes baseado nos arquivos csv disponibilizados.
+- Implemenar o método get_main_menu dentro da classe MenuBuilder.
 
 ## Testes
 Implementar testes para a classe Ingredient e Dish já implementadas anteriormente.
